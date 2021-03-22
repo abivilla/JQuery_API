@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Disapearing</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $('img').click(function(){
+                    $(this).fadeOut();
+                })
+
+                $('#restore').click(function(){
+                    $('img').fadeIn();
+                })
+            })
+
+        </script>
+
+    </head>
+    <body>
+        <img src="https://weu-az-web-cdnep.azureedge.net/mediacontainer/medialibraries/linksvet/images/blog/puppy-socialisation-sounds-programme.jpg?ext=.jpg" alt="img1">
+        <img src="https://weu-az-web-cdnep.azureedge.net/mediacontainer/medialibraries/linksvet/images/blog/puppy-socialisation-sounds-programme.jpg?ext=.jpg" alt="img2">
+        <img src="https://weu-az-web-cdnep.azureedge.net/mediacontainer/medialibraries/linksvet/images/blog/puppy-socialisation-sounds-programme.jpg?ext=.jpg" alt="img3">
+        <img src="https://weu-az-web-cdnep.azureedge.net/mediacontainer/medialibraries/linksvet/images/blog/puppy-socialisation-sounds-programme.jpg?ext=.jpg" alt="img4">
+        <img src="https://weu-az-web-cdnep.azureedge.net/mediacontainer/medialibraries/linksvet/images/blog/puppy-socialisation-sounds-programme.jpg?ext=.jpg" alt="img5">
+        <img src="https://weu-az-web-cdnep.azureedge.net/mediacontainer/medialibraries/linksvet/images/blog/puppy-socialisation-sounds-programme.jpg?ext=.jpg" alt="img6">
+        <img src="https://weu-az-web-cdnep.azureedge.net/mediacontainer/medialibraries/linksvet/images/blog/puppy-socialisation-sounds-programme.jpg?ext=.jpg" alt="img7">
+        <img src="https://weu-az-web-cdnep.azureedge.net/mediacontainer/medialibraries/linksvet/images/blog/puppy-socialisation-sounds-programme.jpg?ext=.jpg" alt="img8">
+        <br>
+        <button id='restore'>Restore</button>
+
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JQuery</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $('#pic2, #hide, #order, a, h3, p').hide();
+
+                $('#Show').click(function(){
+                    $('h3').show();
+                })
+
+                $('#more_puppies').click(function(){
+                    $('a').toggle();
+                })
+
+                $('#pup').hover(function(){
+                    $('p').slideToggle();
+                })
+
+                $('img').click(function(){
+                    $('#pic2').fadeIn();
+                    $('#hide').slideDown();
+                    $('#order').fadeIn();
+                })
+
+                $('#change').click(function(){
+                    $('h3').text('So many puppies!');
+                })
+
+                $('#hide').click(function(){
+                    $('h2').slideUp();
+                })
+
+                $('#order').click(function(){
+                    $('#pic2').after($('#pic1'));
+                    $('#order').click(function(){
+                    $('#pic2').before($('#pic1'));
+                })
+                })
+
+                $('#pic2').click(function(){
+                    $('#pic2').fadeOut();
+                })
+
+                $('#app').click(function(){
+                    $('h2').append($('p1'));
+                })
+
+                $('h2').addClass(["selected higlight"]);
+
+                $( "input" ).keyup(function() {
+                 var value = $( this ).val();
+                 $( "p2" ).text( value );
+                })
+                 .keyup();
+
+            })
+
+        </script>
+
+    </head>
+    <body>
+        <h1>My JQuery Page</h1>
+        <img id="pic1" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=640:*" alt="Puppies">
+        <img id="pic2" src="https://dogtime.com/assets/uploads/2018/10/puppies-cover.jpg" alt="alt picture">
+        <br>
+        <button id='Show'>Show text</button>
+        <button id="hide">Hide Text</button>
+        <button id='order'>Pic Order</button>
+        <button id="change">Change Text</button>
+        <button id="app">Append Text</button>
+        <h3>Puppies are cute!</h3>
+        <h2>These are Golden Retrievers</h2>
+        <p1> There are two puppies.</p1>
+        <br>
+        <input type="text" value="">
+        <p2></p2>
+        <br>
+        <button id="more_puppies">Links to more pictures</button>
+        <a href="https://www.akcpetinsurance.com/res/akc/blog/2018/new-puppy-essentials/header_puppy_checklist.jpg">Puppy1</a>
+        <a href="https://images.squarespace-cdn.com/content/v1/5a3adeb11f318d9dd2dfadaa/1527611880550-6DUOWKQ67ULOTK1ODMLQ/ke17ZwdGBToddI8pDm48kFVfgRqeiJbezCllpJQtY_0UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKciN1LM1HpqVwNixpz1hCKq8qoxvRXzjNTQ09MieJKwtnXQQXYw_DH5ZQqvplaE488/puppies.jpg">Puppy2</a>
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMDQzMgFs_XLv37GyychQw8PzIm-KaBoLM9vakRjK7hgJkUcApYptEC0-3_Bxo3YPrIC4&usqp=CAU">Puppy3</a>
+        <br>
+        <img id="pup" src="http://cdn.akc.org/content/article-body-image/siberian_husky_cute_puppies.jpg" alt="Husky pup">
+        <p>This is a fluffy Husky puppy.</p>
+        
+    </body>
+</html>

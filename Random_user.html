@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Random</title>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+
+            $(document).ready(function(){
+                $.get("https://randomuser.me/api/?results=20", function(res) {
+                    console.log(res);
+                    var html_name = [];
+                    var html_age = [];
+                    var html_email = [];
+                    var html_address = [];
+                       for(var i=0;i<res.results.length;i++){
+                        html_name.push(res.results[i].name.first +" "+ res.results[i].name.last);
+                        html_age.push(res.results[i].registered.age);
+                        html_email.push(res.results[i].email);
+                        html_address.push(res.results[i].location.street.number + " " + res.results[i].location.street.name + ", " + res.results[i].location.city + " " + res.results[i].location.postcode);
+                        $("#Name"+[i]).html(html_name[i]);
+                        $("#Age"+[i]).html(html_age[i]);
+                        $("#Email"+[i]).html(html_email[i]);
+                        $("#Address"+[i]).html(html_address[i]);
+                       }
+                       
+                }, "json");
+            })
+        </script>
+       
+        
+    </head>
+    <body>
+        
+        <h1>Random Users</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th id="Name0">1</th>
+                    <td id="Age0">Mark</td>
+                    <td id="Email0">Otto</td>
+                    <td id="Address0">@mdo</td>
+                </tr>
+                <tr>
+                    <th id="Name1"></th>
+                    <td id="Age1">Jacob</td>
+                    <td id="Email1">Thornton</td>
+                    <td id="Address1">@fat</td>
+                </tr>
+                <tr>
+                    <th id="Name2"></th>
+                    <td id="Age2">Larry</td>
+                    <td id="Email2">the Bird</td>
+                    <td id="Address2">@twitter</td>
+                </tr>
+                <tr>
+                    <th id="Name3">1</th>
+                    <td id="Age3">Mark</td>
+                    <td id="Email3">Otto</td>
+                    <td id="Address3">@mdo</td>
+                </tr>
+                <tr>
+                    <th id="Name4"></th>
+                    <td id="Age4">Jacob</td>
+                    <td id="Email4">Thornton</td>
+                    <td id="Address4">@fat</td>
+                </tr>
+                <tr>
+                    <th id="Name5"></th>
+                    <td id="Age5">Larry</td>
+                    <td id="Email5">the Bird</td>
+                    <td id="Address5">@twitter</td>
+                </tr>
+                <tr>
+                    <th id="Name6">1</th>
+                    <td id="Age6">Mark</td>
+                    <td id="Email6">Otto</td>
+                    <td id="Address6">@mdo</td>
+                </tr>
+                <tr>
+                    <th id="Name7"></th>
+                    <td id="Age7">Jacob</td>
+                    <td id="Email7">Thornton</td>
+                    <td id="Address7">@fat</td>
+                </tr>
+                <tr>
+                    <th id="Name8"></th>
+                    <td id="Age8">Larry</td>
+                    <td id="Email8">the Bird</td>
+                    <td id="Address8">@twitter</td>
+                </tr>
+                <tr>
+                    <th id="Name9">1</th>
+                    <td id="Age9">Mark</td>
+                    <td id="Email9">Otto</td>
+                    <td id="Address9">@mdo</td>
+                </tr>
+                <tr>
+                    <th id="Name10">1</th>
+                    <td id="Age10">Mark</td>
+                    <td id="Email10">Otto</td>
+                    <td id="Address10">@mdo</td>
+                </tr>
+                <tr>
+                    <th id="Name11"></th>
+                    <td id="Age11">Jacob</td>
+                    <td id="Email11">Thornton</td>
+                    <td id="Address11">@fat</td>
+                </tr>
+                <tr>
+                    <th id="Name12"></th>
+                    <td id="Age12">Larry</td>
+                    <td id="Email12">the Bird</td>
+                    <td id="Address12">@twitter</td>
+                </tr>
+                <tr>
+                    <th id="Name13">1</th>
+                    <td id="Age13">Mark</td>
+                    <td id="Email13">Otto</td>
+                    <td id="Address13">@mdo</td>
+                </tr>
+                <tr>
+                    <th id="Name14"></th>
+                    <td id="Age14">Jacob</td>
+                    <td id="Email14">Thornton</td>
+                    <td id="Address14">@fat</td>
+                </tr>
+                <tr>
+                    <th id="Name15"></th>
+                    <td id="Age15">Larry</td>
+                    <td id="Email15">the Bird</td>
+                    <td id="Address15">@twitter</td>
+                </tr>
+                <tr>
+                    <th id="Name16">1</th>
+                    <td id="Age16">Mark</td>
+                    <td id="Email16">Otto</td>
+                    <td id="Address16">@mdo</td>
+                </tr>
+                <tr>
+                    <th id="Name17"></th>
+                    <td id="Age17">Jacob</td>
+                    <td id="Email17">Thornton</td>
+                    <td id="Address17">@fat</td>
+                </tr>
+                <tr>
+                    <th id="Name18"></th>
+                    <td id="Age18">Larry</td>
+                    <td id="Email18">the Bird</td>
+                    <td id="Address18">@twitter</td>
+                </tr>
+                <tr>
+                    <th id="Name19">1</th>
+                    <td id="Age19">Mark</td>
+                    <td id="Email19">Otto</td>
+                    <td id="Address19">@mdo</td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
